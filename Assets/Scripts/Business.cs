@@ -76,6 +76,7 @@ public class Business : MonoBehaviour
     private void UpdateUI()
     {
         levelText.text = "Lvl " + currentLevel;
-        costText.text = "Upgrade: $" + GetUpgradeCost().ToString("F2");
+        // Ask the GameManager to format the upgrade cost nicely!
+        costText.text = "Upgrade: " + GameManager.instance.FormatMoney(GetUpgradeCost());
     }
 }
